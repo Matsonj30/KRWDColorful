@@ -1,0 +1,100 @@
+.titleSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+  
+    p{
+        text-align: center;
+        max-width: 850px;
+        padding: 15px 5px;
+    }
+    .titleText{
+      position: relative;
+      width: fit-content;
+
+      span:nth-child(1){
+        position: absolute;
+        display: block;
+        height: 4px;
+        width: 50%;
+        top: 0;
+        left: 0;
+        content: "";
+        background: linear-gradient(90deg, rgba(69,208,238,1) 0%, $pink 100%);
+      }
+      span:nth-child(2){
+        position: absolute;
+        display: block;
+        height: 4px;
+        width: 50%;
+        bottom: 0;
+        right: 0;
+        content: "";
+        background: linear-gradient(90deg, $green 0%, $yellow 100%);
+        
+      }
+      h2{
+        font-family: "bold";
+        font-size: 50px;
+      }
+      
+      .backdrop{
+        position: absolute;
+        font-size: 100px;
+        color: #f0f0f1;
+        top: -37px;
+        z-index: -1;
+        left: -67px;
+      }
+    }
+  
+  
+  
+  }
+  .warmBorder{
+    background: rgb(255,142,78);
+    background: linear-gradient(90deg, rgba(255,142,78,1) 0%, rgba(255,73,124,1) 100%);
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: $white;
+    font-family: "semibold";
+    padding: 11px 30px;
+    position: relative;
+    cursor: pointer;
+   
+    transition:  box-shadow 0.3s;
+  }
+  .warmBorder::before{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "Get Started";
+    top: 1px;
+    left: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 10px;
+    background-color: $black;
+  
+  }
+  .warmBorder:hover{
+  
+    box-shadow: 0 0 10px $pink, // Initial shadow color
+                0 0 10px $orange; // Gradient shadow color
+  }
+  
+  .coldBorder{
+    @extend .warmBorder;
+    background: rgb(69,208,238);
+    background: linear-gradient(90deg, rgba(69,208,238,1) 0%, rgba(160,195,67,1) 100%);
+  }
+  .coldBorder:hover{
+    box-shadow: 0 0 10px $green, // Initial shadow color
+    0 0 10px $blue; // Gradient shadow color
+  }

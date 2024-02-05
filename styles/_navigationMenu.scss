@@ -129,7 +129,7 @@
             height: 5px;
             margin-bottom: 5px;
             border-radius: 5px;
-            background-color: $primaryColor;
+            background-color: $white;
             transition: 0.3s ease-in;
             z-index: -2;
         
@@ -160,13 +160,15 @@
 
 @media(min-width: 1000px){
     .navigationBar{
+     
         padding-top: 10px;
         z-index: 2;
-        justify-content: space-around;
+        justify-content: center;
         width: 100%;
         height: fit-content;
         position: absolute;
         background-color: transparent;
+        top: 25px;
         img{
             align-self: flex-start;
             width: 180px;
@@ -210,12 +212,12 @@
                     padding-bottom: 0px;
                     border: none;
                     a, p{
-                        font-size: 20px;
+                        font-size: 18px;
                         color: $white;
                         letter-spacing: 1px;
                         width: fit-content;
                         display: inline-block;
-                        
+                        font-family: "semibold";
                     }
                     :after{
                         display: block;

@@ -11,8 +11,14 @@ $accentColor: #644CA8;
 $accentColorDark: #e6242b;
 $accentColorLight: #77623b;;
 
-$white:  #FAFAFA;
-$black: #111111;
+$blue: #45D0EE;
+$green: #A0C343;
+$pink: #FF497C;
+$orange: #FF8E4E;
+$yellow: #FDBA00;
+
+$white:  #FFFFFF;
+$black: #1B1B1B;
 //-------------------------------COLORS---------------------------------
 
 
@@ -29,6 +35,19 @@ $black: #111111;
   src: url(../fonts/Poppins/Poppins-Bold.ttf);
   font-display: swap;
 }
+@font-face{
+  font-family: "semibold";
+  font-style: normal;
+  src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+  font-display: swap;
+}
+@font-face{
+  font-family: "montserrat";
+  font-style: normal;
+  src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
+  font-display: swap;
+}
+
 
 //-------------------------------FONTS---------------------------------
 
@@ -43,6 +62,9 @@ $black: #111111;
   justify-content:  center;
   
 }
+
+
+
 ::selection {
   background-color: $secondaryColor; /* Set your desired highlight color */
   color: $primaryColor; /* Set the text color */
@@ -67,7 +89,7 @@ $black: #111111;
 
 //-------------------------------IMPORTS---------------------------------
 @import "_navigationMenu.scss";
-
-
+@import "index/_landing.scss";
+@import "_multiUseDivs.scss"
 
 //-------------------------------IMPORTS---------------------------------
