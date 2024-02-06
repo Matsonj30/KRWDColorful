@@ -66,20 +66,20 @@ $black: #1B1B1B;
 
 
 ::selection {
-  background-color: $secondaryColor; /* Set your desired highlight color */
-  color: $primaryColor; /* Set the text color */
+  background-color: $green; /* Set your desired highlight color */
+  color: $black; /* Set the text color */
+  
 }
 ::-webkit-scrollbar {
-  background-color: $primaryLight;
-  width: 10px;
+  width: 5px;
 
 }
 ::-webkit-scrollbar-track {
-  background-color: $secondaryColor;
+  background-color: $black;
 }
 ::-webkit-scrollbar-thumb {
 
-  background-color: $primaryDark;
+  background-color: $pink;
 
   height: 10px;
 }

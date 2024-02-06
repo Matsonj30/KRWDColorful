@@ -34,26 +34,25 @@
 }
 
 ::-moz-selection {
-  background-color: #1DA7E2; /* Set your desired highlight color */
-  color: #1C2336; /* Set the text color */
+  background-color: #A0C343; /* Set your desired highlight color */
+  color: #1B1B1B; /* Set the text color */
 }
 
 ::selection {
-  background-color: #1DA7E2; /* Set your desired highlight color */
-  color: #1C2336; /* Set the text color */
+  background-color: #A0C343; /* Set your desired highlight color */
+  color: #1B1B1B; /* Set the text color */
 }
 
 ::-webkit-scrollbar {
-  background-color: #FAFAFA;
-  width: 10px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #1DA7E2;
+  background-color: #1B1B1B;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #fafafa;
+  background-color: #FF497C;
   height: 10px;
 }
 
@@ -303,6 +302,9 @@
   overflow: hidden;
   margin-bottom: 20px;
 }
+.landing .svgBlobs img {
+  z-index: 0;
+}
 .landing .svgBlobs img:nth-child(1) {
   top: 300px;
   left: -300px;
@@ -311,19 +313,19 @@
 }
 .landing .svgBlobs img:nth-child(2) {
   top: 100px;
-  left: -400px;
+  left: -500px;
   position: absolute;
   animation: shiftUp ease-in-out infinite 12s;
 }
 .landing .svgBlobs img:nth-child(3) {
-  top: -300px;
+  top: -500px;
   right: -300px;
   position: absolute;
   animation: shiftAround infinite 12s;
 }
 .landing .svgBlobs img:nth-child(4) {
   top: -50px;
-  right: -500px;
+  right: -600px;
   position: absolute;
   animation: shiftUp ease-in-out infinite 12s;
 }
@@ -334,6 +336,8 @@
   align-items: center;
   color: #FFFFFF;
   padding: 0px 5px;
+  position: relative;
+  z-index: 5;
 }
 .landing .textContent b {
   font-family: "montserrat";
@@ -364,6 +368,26 @@
 }
 
 @media (min-width: 850px) {
+  .landing .svgBlobs img:nth-child(1) {
+    top: 300px;
+    left: -300px;
+    position: absolute;
+  }
+  .landing .svgBlobs img:nth-child(2) {
+    top: 100px;
+    left: -400px;
+    position: absolute;
+  }
+  .landing .svgBlobs img:nth-child(3) {
+    top: -300px;
+    right: -300px;
+    position: absolute;
+  }
+  .landing .svgBlobs img:nth-child(4) {
+    top: -50px;
+    right: -500px;
+    position: absolute;
+  }
   .landing .textContent b {
     font-size: 20px;
   }
@@ -374,7 +398,7 @@
     font-size: 18px;
   }
 }
-@media (min-width: 850px) {
+@media (min-width: 1400px) {
   .landing {
     display: flex;
     justify-content: center;
@@ -387,12 +411,17 @@
   .landing .textContent h1 {
     text-align: start;
   }
+  .landing .textContent .buttons button {
+    margin: unset;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
   .landing .landingImages {
     display: block;
     position: relative;
     width: 550px;
     height: 550px;
-    animation: shiftUp infinite 10s;
+    animation: shiftUp infinite 15s;
   }
   .landing .landingImages img {
     position: absolute;
@@ -437,7 +466,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-30px);
+    transform: translateY(-25px);
   }
   100% {
     transform: translateY(0px);
@@ -462,6 +491,7 @@
   text-align: center;
   position: relative;
   width: 100%;
+  overflow-x: hidden;
 }
 .titleSection p {
   text-align: center;
@@ -495,17 +525,27 @@
 }
 .titleSection .titleText h2 {
   font-family: "bold";
-  font-size: 50px;
+  font-size: 40px;
 }
 .titleSection .titleText .backdrop {
   position: absolute;
-  font-size: 100px;
-  color: #f0f0f1;
-  top: -37px;
+  font-size: 80px;
+  top: -27px;
+  left: -53px;
   z-index: -1;
-  left: -67px;
+  color: #f0f0f1;
 }
 
+@media (min-width: 500px) {
+  .titleSection .titleText h2 {
+    font-size: 50px;
+  }
+  .titleSection .titleText .backdrop {
+    font-size: 100px;
+    top: -37px;
+    left: -67px;
+  }
+}
 .warmBorder, .coldBorder {
   background: rgb(255, 142, 78);
   background: linear-gradient(90deg, rgb(255, 142, 78) 0%, rgb(255, 73, 124) 100%);

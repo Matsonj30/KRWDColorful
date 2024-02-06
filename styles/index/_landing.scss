@@ -7,7 +7,11 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
+
     .svgBlobs{
+        img{
+            z-index: 0;
+        }
         img:nth-child(1){ //Blue & Pink
             top: 300px;
             left: -300px;
@@ -16,25 +20,24 @@
         }
         img:nth-child(2){ //Blue & Green
             top: 100px;
-            left: -400px;
+            left: -500px;
             position: absolute;
             animation: shiftUp ease-in-out infinite 12s;
         }
         img:nth-child(3){ //Blue & Green
-            top: -300px;
+            top: -500px;
             right: -300px;
             position: absolute;
             animation: shiftAround infinite 12s;
         }
         img:nth-child(4){ //Blue & Green
             top: -50px;
-            right: -500px;
+            right: -600px;
             position: absolute;
          
             animation: shiftUp  ease-in-out  infinite 12s;
         }
     }
- 
    
     .textContent{
         text-align: center;
@@ -43,6 +46,8 @@
         align-items: center;
         color: $white;
         padding: 0px 5px;
+        position: relative;
+        z-index: 5;
         b{
             font-family: "montserrat";
             font-size: 16px;
@@ -76,6 +81,32 @@
 
 @media(min-width:850px){
     .landing{
+        .svgBlobs{
+            img:nth-child(1){ //Blue & Pink
+                top: 300px;
+                left: -300px;
+                position: absolute;
+      
+            }
+            img:nth-child(2){ //Blue & Green
+                top: 100px;
+                left: -400px;
+                position: absolute;
+
+            }
+            img:nth-child(3){ //Blue & Green
+                top: -300px;
+                right: -300px;
+                position: absolute;
+
+            }
+            img:nth-child(4){ //Blue & Green
+                top: -50px;
+                right: -500px;
+                position: absolute;
+
+            }
+        }
         .textContent{
             b{
                 font-size: 20px;
@@ -90,7 +121,7 @@
     }
 }
 
-@media(min-width:850px){
+@media(min-width:1400px){
     .landing{
         display: flex;
         justify-content: center;
@@ -101,13 +132,21 @@
             h1{
                 text-align: start;
             }
+            .buttons{
+                button{
+                    margin: unset;
+                    margin-right: 10px;
+                    margin-top: 10px;
+                }
+   
+            }
         }
         .landingImages{
             display: block;
             position: relative;
             width: 550px;
             height: 550px;
-            animation: shiftUp infinite 10s;
+            animation: shiftUp infinite 15s;
             img{
                 position: absolute;
                 border-radius: 50px;
@@ -155,7 +194,7 @@
         transform: translateY(0px);
     }
     50%{
-        transform: translateY(-30px);
+        transform: translateY(-25px);
     }
     100%{
         transform: translateY(0px);
