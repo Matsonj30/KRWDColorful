@@ -297,13 +297,35 @@
   height: -moz-fit-content;
   height: fit-content;
   background-color: #1B1B1B;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 150px;
   padding-bottom: 50px;
   position: relative;
+  overflow: hidden;
   margin-bottom: 20px;
+}
+.landing .svgBlobs img:nth-child(1) {
+  top: 300px;
+  left: -300px;
+  position: absolute;
+  animation: shiftAround infinite 12s;
+}
+.landing .svgBlobs img:nth-child(2) {
+  top: 100px;
+  left: -400px;
+  position: absolute;
+  animation: shiftUp ease-in-out infinite 12s;
+}
+.landing .svgBlobs img:nth-child(3) {
+  top: -300px;
+  right: -300px;
+  position: absolute;
+  animation: shiftAround infinite 12s;
+}
+.landing .svgBlobs img:nth-child(4) {
+  top: -50px;
+  right: -500px;
+  position: absolute;
+  animation: shiftUp ease-in-out infinite 12s;
 }
 .landing .textContent {
   text-align: center;
@@ -337,7 +359,7 @@
 .landing .textContent .buttons button {
   margin: 10px 10px;
 }
-.landing .images {
+.landing .landingImages {
   display: none;
 }
 
@@ -350,6 +372,86 @@
   }
   .landing .textContent p {
     font-size: 18px;
+  }
+}
+@media (min-width: 850px) {
+  .landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing .textContent {
+    text-align: unset;
+    align-items: flex-start;
+  }
+  .landing .textContent h1 {
+    text-align: start;
+  }
+  .landing .landingImages {
+    display: block;
+    position: relative;
+    width: 550px;
+    height: 550px;
+    animation: shiftUp infinite 10s;
+  }
+  .landing .landingImages img {
+    position: absolute;
+    border-radius: 50px;
+  }
+  .landing .landingImages img:nth-child(1) {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 450px;
+    height: 450px;
+  }
+  .landing .landingImages img:nth-child(2) {
+    bottom: 0px;
+    right: -100px;
+    z-index: 3;
+    width: 400px;
+    height: 350px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .landing .landingImages .greenBorder, .landing .landingImages .pinkBorder {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 95%;
+    border: 2px solid #A0C343;
+    z-index: 1;
+    top: 0;
+    right: -50px;
+    border-radius: 50px;
+    transform: rotate(172deg);
+  }
+  .landing .landingImages .pinkBorder {
+    border: 2px solid #FF497C;
+    transform: rotate(0deg);
+  }
+}
+@keyframes shiftUp {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes shiftAround {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-30px, -30px);
+  }
+  100% {
+    transform: translate(0px, 0px);
   }
 }
 .titleSection {
