@@ -20,26 +20,30 @@
         position: absolute;
         display: block;
         height: 4px;
-        width: 50%;
+        width: min(50%, 120px);
         top: 0;
         left: 0;
         content: "";
         background: linear-gradient(90deg, rgba(69,208,238,1) 0%, $pink 100%);
+        z-index: 2;
+
       }
       span:nth-child(2){
         position: absolute;
         display: block;
         height: 4px;
-        width: 50%;
+        width: min(50%, 150px);
         bottom: 0;
         right: 0;
         content: "";
         background: linear-gradient(90deg, $green 0%, $yellow 100%);
-        
+        z-index: 2;
       }
       h2{
+        position: relative;
         font-family: "bold";
         font-size: 40px;
+        z-index: 2;
       }
       
       .backdrop{
@@ -47,7 +51,7 @@
         font-size: 80px;
         top: -27px;
         left: -53px;
-        z-index: -1;
+        z-index: 1;
         color: #f0f0f1;
       }
     }
@@ -56,6 +60,20 @@
   
   }
 
+  .secondaryTitleSection{
+    @extend .titleSection;
+      .titleText{
+        color: $white;
+        .backdrop{
+          color: rgba(255, 255, 255, 0.05);
+        }
+      
+     
+    }
+    p{
+      color: $white;
+    }
+  }
   @media(min-width:500px){
     .titleSection{
 
@@ -64,9 +82,12 @@
           font-size: 50px;
         }
         .backdrop{   
+          width: 100%;
+          text-align: center;
+          position: flex;
           font-size: 100px;
           top: -37px;
-          left: -67px;
+          left: -69px;
         }
       }
     }

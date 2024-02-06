@@ -1,0 +1,144 @@
+.pricing{
+    background-color: $black;
+    padding-top: 30px;
+
+    .pricingContainer{
+        
+        
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .priceOption{
+            width: calc(min(400px,97%));
+            height: 500px;
+            margin: 20px 50px;
+            transition: 0.5s ease-in-out;
+            position: relative;
+            border: 3px solid $accentColor;
+            border-image: linear-gradient($blue, $pink) 1;
+        
+            transition: 0.5s;
+            .topCheck{
+                position: absolute;
+                top: 10px;
+                left: 8px;
+                font-size: 20px;
+                color: $black;
+            }
+            .priceBox{
+        
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                h4{
+                    font-size: 40px;
+                    font-weight: 100;
+                    color: $white;
+                }
+                p{
+                   
+                    font-weight: 400;
+                    transform: translateY(-6px);
+                    padding-bottom: 11px;
+                    padding-top: 4px;
+                    color: $white;
+                    letter-spacing: 1px;
+                    font-size: 24px;
+                    
+                }
+                .addBorder{
+                    position: relative;
+                    width: fit-content;
+                    height: 20px;
+                    padding: 3px 15px;
+                    border: 2px solid #45cfee2c;
+                    color: $accentColor;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 300px;
+                    z-index: 1;
+                    background-color: $black;
+                    font-family: "semibold";
+                    font-size: 16px;
+                    color: $blue;
+                    letter-spacing: 1px;
+                 
+                }
+                .line{
+                    position: relative;
+                    width: 290px;
+                    height: 1px;
+                    border-top: 2px solid #45cfee2c;
+                    z-index: 0;
+                    transform: translateY(-20px);
+
+                }
+            }
+            .priceFeatures{
+                ul{
+                    padding: 0px 20px;
+
+                    li{
+                        display: flex;
+                        align-items: center;
+                        padding-top: 15px;
+                        padding-left: 9px;
+                        font-size: 18px;
+                        color: $white;
+                        img{
+                            margin-right: 5px;
+                            width: 24px;
+                            height: 24px;
+                        }
+                        .fa{    
+                            position: relative;
+                            color: $accentColor;
+                            font-size: 20px;
+                            padding-right: 7px;
+                            transform: translateY(4px);
+                        }
+                    }
+                }
+            }
+           
+        }
+        .popular:hover{
+            box-shadow: 5px 0 20px #ff497d7e, -5px 0 20px #3d86da;
+        }
+        .popular::before{
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            display: block;
+            content: "";
+            border-style: solid;
+            border-width: 64px 64px 0px 0px;
+            border-color: $blue transparent;
+        
+        }
+        .other{
+            @extend .priceOption;
+            border-image: linear-gradient($green, $black) 1;
+            box-shadow: none;
+
+            .priceBox{
+                .addBorder{
+                    border: 2px solid #a1c3437a;
+                    color: $green;
+                }
+                .line{
+                    border-top: 2px solid #a1c3437a;
+                }
+            }
+        }
+        .other:hover{
+            box-shadow: 0px 0 20px $green;
+        
+        }
+    }
+}
