@@ -7,7 +7,13 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
-
+    .logo{
+        height: 70px;
+        width: 187px;
+        position: absolute;
+        top: 22px;
+        left: 5px;
+    }
     .svgBlobs{
         img{
             z-index: 0;
@@ -79,8 +85,20 @@
     }
 }
 
+
+
+@media(min-width:450px){
+    .landing{
+        .logo{
+            left: 30px;
+            top: 26px;
+        }
+    }
+}
+
 @media(min-width:850px){
     .landing{
+  
         .svgBlobs{
             img:nth-child(1){ //Blue & Pink
                 top: 300px;
@@ -121,8 +139,21 @@
     }
 }
 
+@media(min-width:1200px){
+    .landing{
+        .logo{
+            top: 15px;
+            height: 100px;
+            width: 267px;
+        }
+    }
+}
 @media(min-width:1400px){
     .landing{
+        .logo{
+            left: 7vw;
+            
+        }
         display: flex;
         justify-content: center;
         align-items: center;

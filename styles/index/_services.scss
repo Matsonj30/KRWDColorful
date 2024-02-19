@@ -19,12 +19,16 @@
             .serviceImage{
                 position: relative;
                 margin: 35px 0px;
+              
                 img{
+                    position: relative;
                     width: 128px;
                     height: 128px;
+                    z-index: 6;
                 }
             }
             .serviceImage::after{
+                transition: 0.3s;
                 content: "";
                 width: 170px;
                 height: 170px;
@@ -59,13 +63,90 @@
                 left: -39px;
             }
          
+            .circlePulses{
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+        
+          
+
+                .circle1, .circle2, .circle3{
+                    position: absolute;
+                    width: 320px;
+                    height: 320px;
+                    opacity: 0;
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%);
+                    animation-delay: 0s; 
+                   
+                }
+                .blue{
+                    background-color: $blue;
+                }
+                .green{
+                    background-color: $green !important;
+                }
+                .pink{
+                    background-color: $pink !important;
+                }
+                .orange{
+                    background-color: $orange !important;
+                }
+                .yellow{
+                    background-color: $yellow !important;
+                }
          
-    
+            }
+   
             b{
                 font-family: "bold";
                 font-size: 26px;
                 
             }
+        }
+        .service:hover > .serviceImage{
+            &.serviceImage:after{
+                width: 208px;
+                height: 208px;
+                left: -40px;
+                top: -40px;
+                z-index: 5;
+            }
+            &.blueBackground::after{
+                background-color: #76c0d1;
+            }
+            &.greenBackground::after{
+                background-color: #b3cc6e;
+            }
+            &.orangeBackground::after{
+                background-color: #f59964;
+            }
+            &.pinkBackground::after{
+                background-color: #e04d77;
+            }
+            &.yellowBackground::after{
+                background-color: #f8ca4c;
+            }
+      
+        }
+        .service:hover > .serviceImage{
+            .circlePulses{
+                .circle1{
+                    animation: growAndFade 3s infinite ease-out;
+                }
+                .circle2{
+                    animation: growAndFade 3s infinite ease-out;
+                    animation-delay: 1s; 
+                }
+                .circle3{
+                    animation: growAndFade 3s infinite ease-out;
+                    animation-delay: 2s;
+                    
+                }
+            }
+          
         }
     }
     
@@ -82,3 +163,14 @@
         }
     }
 }
+
+@keyframes growAndFade {
+    0% {
+        opacity: 0.55;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.2); /* Adjust scale value as needed */
+    }
+  }

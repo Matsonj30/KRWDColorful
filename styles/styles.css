@@ -68,12 +68,6 @@
   align-items: center;
   position: absolute;
 }
-.navigationBar img {
-  padding-left: 30px;
-  padding-top: 5px;
-  width: 110px;
-  height: 88px;
-}
 .navigationBar a, .navigationBar p {
   text-decoration: none;
   cursor: pointer;
@@ -114,10 +108,11 @@
   overflow: visible;
   transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transform: translateX(100%);
-  background: #1DA7E2;
-  background: linear-gradient(222deg, #1DA7E2 0%, #1e86b3 100%);
+  background-color: #1B1B1B;
 }
 .navigationBar #menu img {
+  height: 100px;
+  width: 267px;
   padding-left: 0px;
 }
 .navigationBar #menu ul {
@@ -133,18 +128,21 @@
   padding: 20px 0px;
   text-align: center;
   width: 90%;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 2px solid;
   margin-right: unset;
+  -o-border-image: linear-gradient(to right, #FF8E4E, #FF497C);
+     border-image: linear-gradient(to right, #FF8E4E, #FF497C); /* Define the gradient */
+  border-image-slice: 1; /* Ensure the gradient covers the entire border */
 }
 .navigationBar #menu ul li .fa {
   display: none;
 }
 .navigationBar #menu ul li a, .navigationBar #menu ul li p {
-  font-family: "bold";
+  font-family: "semibold";
   text-decoration: none;
   font-size: 20px;
   color: #FFFFFF;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 .navigationBar a button, .navigationBar p button {
   letter-spacing: 1px;
@@ -156,7 +154,7 @@
 
 .hamburgerMenu {
   position: absolute;
-  z-index: 7;
+  z-index: 10;
   top: 40px;
   right: 30px;
 }
@@ -199,7 +197,7 @@
 
 @media (min-width: 1000px) {
   .navigationBar {
-    padding-top: 10px;
+    padding-top: 20px;
     z-index: 2;
     justify-content: center;
     width: 100%;
@@ -208,11 +206,6 @@
     position: absolute;
     background-color: transparent;
     top: 25px;
-  }
-  .navigationBar img {
-    align-self: flex-start;
-    width: 180px;
-    height: auto;
   }
   .navigationBar a button, .navigationBar p button {
     display: unset;
@@ -265,7 +258,10 @@
   .navigationBar #menu ul li :after {
     display: block;
     content: "";
-    border-bottom: 3px solid #1C2336;
+    border-bottom: 3px solid;
+    -o-border-image: linear-gradient(to right, #FF8E4E, #FF497C);
+       border-image: linear-gradient(to right, #FF8E4E, #FF497C); /* Define the gradient */
+    border-image-slice: 1; /* Ensure the gradient covers the entire border */
     transform: scaleX(0);
     transition: 250ms ease-in-out;
   }
@@ -275,6 +271,7 @@
   }
   .navigationBar #menu ul .listLogo {
     margin-left: 30px;
+    display: none;
   }
   .navigationBar a button {
     display: flex;
@@ -306,6 +303,13 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
+}
+.landing .logo {
+  height: 70px;
+  width: 187px;
+  position: absolute;
+  top: 22px;
+  left: 5px;
 }
 .landing .svgBlobs img {
   z-index: 0;
@@ -372,6 +376,12 @@
   display: none;
 }
 
+@media (min-width: 450px) {
+  .landing .logo {
+    left: 30px;
+    top: 26px;
+  }
+}
 @media (min-width: 850px) {
   .landing .svgBlobs img:nth-child(1) {
     top: 300px;
@@ -403,11 +413,21 @@
     font-size: 18px;
   }
 }
+@media (min-width: 1200px) {
+  .landing .logo {
+    top: 15px;
+    height: 100px;
+    width: 267px;
+  }
+}
 @media (min-width: 1400px) {
   .landing {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .landing .logo {
+    left: 7vw;
   }
   .landing .textContent {
     text-align: unset;
@@ -515,10 +535,13 @@
   margin: 35px 0px;
 }
 .servicesSection .services .service .serviceImage img {
+  position: relative;
   width: 128px;
   height: 128px;
+  z-index: 6;
 }
 .servicesSection .services .service .serviceImage::after {
+  transition: 0.3s;
   content: "";
   width: 170px;
   height: 170px;
@@ -552,9 +575,73 @@
   top: -39px;
   left: -39px;
 }
+.servicesSection .services .service .circlePulses {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.servicesSection .services .service .circlePulses .circle1, .servicesSection .services .service .circlePulses .circle2, .servicesSection .services .service .circlePulses .circle3 {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  opacity: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 0s;
+}
+.servicesSection .services .service .circlePulses .blue {
+  background-color: #45D0EE;
+}
+.servicesSection .services .service .circlePulses .green {
+  background-color: #A0C343 !important;
+}
+.servicesSection .services .service .circlePulses .pink {
+  background-color: #FF497C !important;
+}
+.servicesSection .services .service .circlePulses .orange {
+  background-color: #FF8E4E !important;
+}
+.servicesSection .services .service .circlePulses .yellow {
+  background-color: #FDBA00 !important;
+}
 .servicesSection .services .service b {
   font-family: "bold";
   font-size: 26px;
+}
+.servicesSection .services .service:hover > .serviceImage.serviceImage:after {
+  width: 208px;
+  height: 208px;
+  left: -40px;
+  top: -40px;
+  z-index: 5;
+}
+.servicesSection .services .service:hover > .serviceImage.blueBackground::after {
+  background-color: #76c0d1;
+}
+.servicesSection .services .service:hover > .serviceImage.greenBackground::after {
+  background-color: #b3cc6e;
+}
+.servicesSection .services .service:hover > .serviceImage.orangeBackground::after {
+  background-color: #f59964;
+}
+.servicesSection .services .service:hover > .serviceImage.pinkBackground::after {
+  background-color: #e04d77;
+}
+.servicesSection .services .service:hover > .serviceImage.yellowBackground::after {
+  background-color: #f8ca4c;
+}
+.servicesSection .services .service:hover > .serviceImage .circlePulses .circle1 {
+  animation: growAndFade 3s infinite ease-out;
+}
+.servicesSection .services .service:hover > .serviceImage .circlePulses .circle2 {
+  animation: growAndFade 3s infinite ease-out;
+  animation-delay: 1s;
+}
+.servicesSection .services .service:hover > .serviceImage .circlePulses .circle3 {
+  animation: growAndFade 3s infinite ease-out;
+  animation-delay: 2s;
 }
 
 @media (max-width: 550px) {
@@ -564,6 +651,16 @@
   .services .service .serviceImage {
     scale: 0.8;
     margin: 20px 20px;
+  }
+}
+@keyframes growAndFade {
+  0% {
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2); /* Adjust scale value as needed */
   }
 }
 .pricing {
@@ -836,6 +933,33 @@
   background-color: #1B1B1B;
   padding: 30px 0px;
   border-bottom: 2px solid #A0C343;
+  position: relative;
+  overflow: hidden;
+}
+.ourProcess .svgBlobs {
+  display: none;
+}
+.ourProcess .svgBlobs img {
+  position: absolute;
+}
+.ourProcess .svgBlobs img:nth-child(1) {
+  top: -400px;
+  right: -400px;
+  animation: shiftAround 13s infinite;
+}
+.ourProcess .svgBlobs img:nth-child(2) {
+  top: 300px;
+  left: -450px;
+  animation: shiftAround reverse 13s infinite;
+}
+.ourProcess .svgBlobs img:nth-child(3) {
+  right: -500px;
+  top: 800px;
+}
+.ourProcess .svgBlobs img:nth-child(4) {
+  left: 0px;
+  bottom: -400px;
+  animation: shiftAround 9s infinite;
 }
 .ourProcess .processChart {
   display: flex;
@@ -908,6 +1032,9 @@
   }
 }
 @media (min-width: 1150px) {
+  .ourProcess .svgBlobs {
+    display: block;
+  }
   .ourProcess .processChart {
     flex-direction: column;
     align-items: center;
@@ -992,6 +1119,17 @@
   }
   .ourProcess .processChart .process:nth-child(3) .lineInbetween .rightSideLine {
     background-color: #A0C343;
+  }
+}
+@keyframes shiftAround {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-30px, -30px);
+  }
+  100% {
+    transform: translate(0px, 0px);
   }
 }
 footer {
