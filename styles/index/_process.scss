@@ -39,7 +39,7 @@
                 text-align: center;
             }
         }
-        img{
+        svg{
             width: 250px;
             height: 250px;
             position: absolute;
@@ -109,13 +109,15 @@
                         font-size: 50px;
                     }
                 }
-                img{
+                svg{
                     position: relative;
                     opacity: 1;
                     left: unset;
                     margin: 0px 60px;
                     width: 300px;
                     height: 300px;
+
+        
                 }
 
                 .lineInbetween{
@@ -152,7 +154,7 @@
             }
             .process:nth-child(even){
          
-                    img{
+                    svg{
                         order: -1;
                     }
             }

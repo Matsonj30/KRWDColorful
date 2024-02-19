@@ -873,7 +873,7 @@
   max-width: 500px;
   text-align: center;
 }
-.ourProcess .process img {
+.ourProcess .process svg {
   width: 250px;
   height: 250px;
   position: absolute;
@@ -932,7 +932,7 @@
   .ourProcess .processChart .process .processText b {
     font-size: 50px;
   }
-  .ourProcess .processChart .process img {
+  .ourProcess .processChart .process svg {
     position: relative;
     opacity: 1;
     left: unset;
@@ -971,7 +971,7 @@
     right: 0;
     top: -22px;
   }
-  .ourProcess .processChart .process:nth-child(even) img {
+  .ourProcess .processChart .process:nth-child(even) svg {
     order: -1;
   }
   .ourProcess .processChart .process:nth-child(2) .lineInbetween .leftSideLine {
