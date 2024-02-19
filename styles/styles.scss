@@ -84,6 +84,12 @@ $black: #1B1B1B;
   height: 10px;
 }
 
+
+@media(min-width:1000px){
+  p{
+    font-size: 18px !important;
+  }
+}
 //-------------------------------MULTI PURPOSE CSS---------------------------------
 
 
@@ -92,6 +98,11 @@ $black: #1B1B1B;
 @import "index/_landing.scss";
 @import "index/_services.scss";
 @import "index/_pricing.scss";
+@import "index/_portfolio.scss";
+@import "index/_process.scss";
+
+
+@import "_footer.scss";
 @import "_multiUseDivs.scss";
 
 //-------------------------------IMPORTS---------------------------------

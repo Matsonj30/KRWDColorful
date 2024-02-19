@@ -1,0 +1,191 @@
+.ourProcess{
+    background-color: $black;
+    padding: 30px 0px;
+    border-bottom: 2px solid $green;
+
+    .processChart{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .process{
+       
+        position: relative;
+        margin: 50px 10px;
+        .processText{
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            b{
+                font-family: "bold";
+                color: $orange;
+                font-size: 40px;
+                text-align: center;
+            }
+            .blue{
+                color: $blue;
+            }
+            .green{
+                color: $green;
+            }
+            .pink{
+                color: $pink;
+            }
+            p{
+                max-width: 500px;
+                text-align: center;
+            }
+        }
+        img{
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            opacity: 0.1;
+            z-index: 1;
+            top: 0;
+            left: calc(50% - 125px);
+        }
+
+        .lineInbetween{
+      
+            position: relative;
+            .leftSideLine{
+                display: none;
+            }
+            .largeLine{
+                display: none;
+                width: 4px;
+                height: 130px;
+                background-color: $green;
+                position: absolute;
+                bottom: -135px;
+                right: calc(50% - 2px);
+                background: linear-gradient(180deg, rgba(255,142,78,1) 0%, rgba(69,208,238,1) 100%);
+       
+            }
+            .rightSideLine{
+                display: none;
+            }
+        }
+    }
+    
+}
+
+@media(min-width: 1040px){
+    .ourProcess{
+        .processChart{
+            .process{
+                margin: 70px 20px;
+            }
+        }
+    }
+}
+
+
+@media(min-width: 1400px){
+    .ourProcess{
+        .processChart{
+            flex-direction: column;
+            align-items: center;
+            justify-content: unset;
+            flex-wrap: unset;
+            .process{
+                margin: 70px 20px;
+                justify-content: center;
+                display: flex;
+                .processText{
+                    margin: 30px 30px;
+                    align-items: start;
+                    p,b{
+                        text-align: start;
+                    }
+                    p{
+                        max-width: 650px;
+                    }
+                    b{
+                        font-size: 50px;
+                    }
+                }
+                img{
+                    position: relative;
+                    opacity: 1;
+                    left: unset;
+                    margin: 0px 60px;
+                    width: 300px;
+                    height: 300px;
+                }
+
+                .lineInbetween{
+                    width: 700px;
+                    position: absolute;
+                    bottom: -54px;
+                    height: fit-content;
+                    .leftSideLine{
+                        display: block;
+                        background-color: $blue;
+                        width: 8px;
+                        height: 30px;
+                        position: absolute;
+             
+                    }
+                    .largeLine{
+                        width: 700px;
+                        height: 8px;
+                        display: block;
+                        top: 0px;
+                        left: calc(50% - 350px);
+                        background: linear-gradient(270deg, rgba(255,142,78,1) 0%, rgba(69,208,238,1) 100%);
+                    }
+                    .rightSideLine{
+                        display: block;
+                        background-color: $orange;
+                        width: 8px;
+                        height: 30px;
+                        position: absolute;
+                        right: 0;
+                        top: -22px;
+                    }
+                }
+            }
+            .process:nth-child(even){
+         
+                    img{
+                        order: -1;
+                    }
+            }
+            .process:nth-child(2){
+                .lineInbetween{
+                    .leftSideLine{
+                        top: -22px;
+
+                    }
+                    .largeLine{
+                        background: linear-gradient(270deg, $green 0%, rgba(69,208,238,1) 100%);
+
+                    }
+                    .rightSideLine{
+                        top: 0px;
+                        background-color: $green;
+                    }
+                }
+            }
+            .process:nth-child(3){
+                .lineInbetween{
+                    .leftSideLine{
+                        background-color: $pink;
+                    }
+                    .largeLine{
+                        background: linear-gradient(270deg, $green 0%, $pink 100%);
+
+                    }
+                    .rightSideLine{
+                        background-color: $green;
+                    }
+                }
+            }
+        }
+    }
+}
