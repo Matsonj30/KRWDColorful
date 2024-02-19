@@ -85,7 +85,7 @@
 }
 
 
-@media(min-width: 1400px){
+@media(min-width: 1150px){
     .ourProcess{
         .processChart{
             flex-direction: column;
@@ -93,7 +93,7 @@
             justify-content: unset;
             flex-wrap: unset;
             .process{
-                margin: 70px 20px;
+                margin: 50px 20px;
                 justify-content: center;
                 display: flex;
                 .processText{
@@ -114,16 +114,16 @@
                     opacity: 1;
                     left: unset;
                     margin: 0px 60px;
-                    width: 300px;
-                    height: 300px;
+                    width: 280px;
+                    height: 280px;
 
         
                 }
 
                 .lineInbetween{
-                    width: 700px;
+                    width: 720px;
                     position: absolute;
-                    bottom: -54px;
+                    bottom: -45px;
                     height: fit-content;
                     .leftSideLine{
                         display: block;
@@ -134,11 +134,11 @@
              
                     }
                     .largeLine{
-                        width: 700px;
+                        width: 720px;
                         height: 8px;
                         display: block;
                         top: 0px;
-                        left: calc(50% - 350px);
+                        left: calc(50% - 360px);
                         background: linear-gradient(270deg, rgba(255,142,78,1) 0%, rgba(69,208,238,1) 100%);
                     }
                     .rightSideLine{
@@ -188,6 +188,7 @@
                     }
                 }
             }
+
         }
     }
 }

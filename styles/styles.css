@@ -907,7 +907,7 @@
     margin: 70px 20px;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1150px) {
   .ourProcess .processChart {
     flex-direction: column;
     align-items: center;
@@ -915,7 +915,7 @@
     flex-wrap: unset;
   }
   .ourProcess .processChart .process {
-    margin: 70px 20px;
+    margin: 50px 20px;
     justify-content: center;
     display: flex;
   }
@@ -937,13 +937,13 @@
     opacity: 1;
     left: unset;
     margin: 0px 60px;
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
   }
   .ourProcess .processChart .process .lineInbetween {
-    width: 700px;
+    width: 720px;
     position: absolute;
-    bottom: -54px;
+    bottom: -45px;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -955,11 +955,11 @@
     position: absolute;
   }
   .ourProcess .processChart .process .lineInbetween .largeLine {
-    width: 700px;
+    width: 720px;
     height: 8px;
     display: block;
     top: 0px;
-    left: calc(50% - 350px);
+    left: calc(50% - 360px);
     background: linear-gradient(270deg, rgb(255, 142, 78) 0%, rgb(69, 208, 238) 100%);
   }
   .ourProcess .processChart .process .lineInbetween .rightSideLine {
@@ -1219,7 +1219,9 @@ footer .contact li:nth-child(4) img {
   position: absolute;
   font-size: 80px;
   top: -27px;
-  left: -53px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   color: #f0f0f1;
 }
@@ -1239,12 +1241,7 @@ footer .contact li:nth-child(4) img {
     font-size: 50px;
   }
   .titleSection .titleText .backdrop, .secondaryTitleSection .titleText .backdrop {
-    width: 100%;
-    text-align: center;
-    position: flex;
     font-size: 100px;
-    top: -37px;
-    left: -69px;
   }
 }
 .warmBorder, .coldBorder {
