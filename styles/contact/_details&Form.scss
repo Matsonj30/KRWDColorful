@@ -1,0 +1,145 @@
+
+.titleSection{
+    margin: 50px 0px;
+
+    a{
+        font-family: "bold";
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+.contactDetailsAndForm{
+    overflow: hidden;
+    position: relative;
+    .svgBlobs{
+        img:nth-child(1){ //Blue & Pink
+            top: -550px;
+            left: -380px;
+            position: absolute;
+            animation: shiftAround infinite 12s;
+        }
+        img:nth-child(2){ //Blue & Green
+            top: 100px;
+            left: -500px;
+            position: absolute;
+            animation: shiftUp ease-in-out infinite 12s;
+        }
+        img:nth-child(3){ //Blue & Green
+            bottom: -500px;
+            right: -300px;
+            position: absolute;
+            animation: shiftAround infinite 12s;
+        }
+        img:nth-child(4){ //Blue & Green
+            top: -450px;
+            right: -525px;
+            position: absolute;
+         
+            animation: shiftUp  ease-in-out  infinite 12s;
+        }
+    }
+
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    width: 100%;
+
+    .contactDetails{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 30px;
+        width: 60%;
+        .contactDetail{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(24%);
+            min-width: 200px;
+            margin: 10px 0px;
+            svg{
+                width: 50px;
+                height: 50px;
+                
+               path{
+                fill: $orange;
+               }
+            }
+         
+            b{
+                font-family: "semibold";
+                color: $white;
+            }
+            p{
+                color: $white; 
+            }
+        }
+    }
+
+
+
+
+
+    .formSection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        overflow: hidden;
+        width: 100%;
+        z-index: 20;
+        form{
+            padding: 20px 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            ::placeholder{
+                color: rgb(160, 160, 160);
+            }
+            label{
+                color: $white;
+            }
+            input{
+                background-color: #242424;
+                border: none;
+                border-radius: 3px;
+                padding: 15px 5px;
+                margin: 10px 0px;
+                transition: 0.5s;
+                border: 1px solid #242424;
+                outline: none;
+                width: 100%;
+                color: $white;
+                font-size: 16px;
+                
+            }
+            input:focus{
+           
+                border: 1px solid $green;
+            }
+            textarea{
+                @extend input;
+                resize: none;
+                height: 120px;
+            }
+        
+        button{
+            margin: 10px 0px;
+            width: fit-content;
+    
+            
+        }
+        button::before{
+            content: "Submit Form";
+        }
+        }
+    }
+}
+

@@ -13,7 +13,14 @@ function burgerMenu(){
     }
 }
 
-function scrollToDiv(location){
-    document.getElementById(location).scrollIntoView({behavior: "smooth"});
+function scrollToDiv(location, pageURL = null){
 
+    if(pageURL == null){
+        document.getElementById(location).scrollIntoView({behavior: "smooth", block: "center"});
+    } //On correct page
+    else{
+        window.location.href = '/index' + '#' + location;
+       // document.getElementById(location).scrollIntoView({behavior: "smooth", block: "center"});
+    }
+    burgerMenu(true)
 }
