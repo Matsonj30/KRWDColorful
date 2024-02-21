@@ -1,4 +1,4 @@
-function burgerMenu(){
+function burgerMenu(scrollDiv = false){
     var checkbox = document.getElementById("hamburgerCheckbox");
     var menu = document.getElementById("menu");
     var burgerMenu = document.getElementsByClassName("hamburgerMenu");
@@ -11,6 +11,11 @@ function burgerMenu(){
         menu.style.transform = "translate(100%)";
         burgerMenu[0].style.position = "absolute";
     }
+    if(scrollDiv == true){
+        menu.style.transform = "translate(100%)";
+        burgerMenu[0].style.position = "absolute";
+        checkbox.checked = false;
+    }
 }
 
 function scrollToDiv(location, pageURL = null){
@@ -19,7 +24,7 @@ function scrollToDiv(location, pageURL = null){
         document.getElementById(location).scrollIntoView({behavior: "smooth", block: "center"});
     } //On correct page
     else{
-        window.location.href = '/index' + '#' + location;
+        window.location.href = 'index' + '#' + location;
        // document.getElementById(location).scrollIntoView({behavior: "smooth", block: "center"});
     }
     burgerMenu(true)

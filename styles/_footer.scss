@@ -1,10 +1,11 @@
 footer{
     color: $white !important;
-    background-color: $black;
+    background-color: #141414;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    border-top: 2px solid $green;
      .section{
         display: flex;
         flex-direction: column;
@@ -35,7 +36,9 @@ footer{
                     text-decoration: none;
                     color: $white;
                 }
-              
+                p{
+                    font-size:  16px !important;
+                }
                 b{
                     color: $white;
                     font-family: "semibold";
@@ -70,7 +73,7 @@ footer{
         align-items: center;
         
         p{
-            
+            font-size: 16px !important;
             text-align: center;
             color: $white;
             width: 95vw;
@@ -92,7 +95,7 @@ footer{
                
                 p{
                     display:inline-block;
-                    font-size: 16px;
+                    font-size: 16px !important;
                 }
             }
           
@@ -165,6 +168,9 @@ footer{
         .section{
             padding-top: 49px;
             margin: 0px 25px;
+        }
+        .hours{
+            margin-left: 90px;
         }
         .logoAndDescription{
             transform: translateY(-30px);
