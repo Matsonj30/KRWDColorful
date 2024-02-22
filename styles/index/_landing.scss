@@ -83,6 +83,14 @@
     .landingImages{
         display: none;
     }
+    .buttons{
+        a{
+            button::before{
+                content: "Contact Us";
+            }
+        }
+        
+    }
 }
 
 

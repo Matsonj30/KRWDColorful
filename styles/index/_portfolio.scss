@@ -22,7 +22,7 @@
                 border-radius: 20px;
                 object-fit: cover;
                 width: 100%;
-    
+                height: auto;
             }
             .imageDetails{
                 display: flex;
@@ -87,6 +87,7 @@
                 
                 width: 350px;
                 height: 350px;
+                
                 margin: 10px 10px;
                 .imageDetails{
                     text-align: center;

@@ -48,7 +48,8 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-
+        
+        width: 100%;
         .priceOption{
             width: calc(min(400px,97%));
             height: 500px;
