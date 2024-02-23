@@ -738,9 +738,9 @@
   flex-direction: column;
   align-items: center;
 }
-.pricing .pricingContainer .priceOption .priceBox h4, .pricing .pricingContainer .other .priceBox h4 {
+.pricing .pricingContainer .priceOption .priceBox span, .pricing .pricingContainer .other .priceBox span {
   font-size: 40px;
-  font-weight: 100;
+  font-family: "Poppins";
   color: #FFFFFF;
 }
 .pricing .pricingContainer .priceOption .priceBox p, .pricing .pricingContainer .other .priceBox p {
@@ -874,6 +874,7 @@
      object-fit: cover;
   width: 100%;
   height: auto;
+  max-width: 520px;
 }
 .portfolio .portfolioImages .companyImage .imageDetails {
   display: flex;
@@ -920,7 +921,7 @@
   background: linear-gradient(180deg, rgba(69, 208, 238, 0) 0%, #338d49 100%);
 }
 
-@media (min-width: 820px) {
+@media (min-width: 520px) {
   .portfolio .portfolioImages {
     max-width: 1600px;
   }
@@ -933,7 +934,7 @@
     text-align: center;
   }
   .portfolio .portfolioImages .companyImage .imageDetails a {
-    font-size: 28-px;
+    font-size: 28px;
   }
 }
 .ourProcess {
@@ -1477,6 +1478,7 @@ footer .logoAndDescription p {
 footer .logoAndDescription img {
   margin-bottom: 10px;
   height: 100px;
+  width: 267px;
 }
 footer .hours {
   display: flex;

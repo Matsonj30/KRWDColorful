@@ -23,6 +23,7 @@
                 object-fit: cover;
                 width: 100%;
                 height: auto;
+                max-width: 520px;
             }
             .imageDetails{
                 display: flex;
@@ -79,7 +80,7 @@
     }
 }
 
-@media(min-width:820px){
+@media(min-width:520px){
     .portfolio{
         .portfolioImages{
             max-width: 1600px;
@@ -95,7 +96,7 @@
 
                     }
                     a{
-                        font-size: 28-px;
+                        font-size: 28px;
                     }
                 }
             }
