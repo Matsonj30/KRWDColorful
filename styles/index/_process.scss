@@ -3,6 +3,9 @@
     padding: 30px 0px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .svgBlobs{
         display: none;
         img{
@@ -35,71 +38,80 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-    }
-    .process{
-       
-        position: relative;
-        margin: 50px 10px;
-        .processText{
-            color: $white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-            b{
-                font-family: "bold";
-                color: $orange;
-                font-size: 40px;
-                text-align: center;
-            }
-            .blue{
-                color: $blue;
-            }
-            .green{
-                color: $green;
-            }
-            .pink{
-                color: $pink;
-            }
-            p{
-                max-width: 500px;
-                text-align: center;
-            }
-        }
-        svg{
-            width: 250px;
-            height: 250px;
-            position: absolute;
-            opacity: 0.1;
-            z-index: 1;
-            top: 0;
-            left: calc(50% - 125px);
-        }
 
-        .lineInbetween{
-      
-            position: relative;
-            .leftSideLine{
-                display: none;
-            }
-            .largeLine{
-                display: none;
-                width: 4px;
-                height: 130px;
-                background-color: $green;
-                position: absolute;
-                bottom: -135px;
-                right: calc(50% - 2px);
-                background: linear-gradient(180deg, rgba(255,142,78,1) 0%, rgba(69,208,238,1) 100%);
+        .process{
        
+            position: relative;
+            margin: 50px 10px;
+            .processText{
+                color: $white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                z-index: 2;
+                b{
+                    font-family: "bold";
+                    color: $orange;
+                    font-size: 40px;
+                    text-align: center;
+                }
+                .blue{
+                    color: $blue;
+                }
+                .green{
+                    color: $green;
+                }
+                .pink{
+                    color: $pink;
+                }
+                p{
+                    max-width: 500px;
+                    text-align: center;
+                }
             }
-            .rightSideLine{
-                display: none;
+            svg{
+                width: 250px;
+                height: 250px;
+                position: absolute;
+                opacity: 0.1;
+                z-index: 1;
+                top: 0;
+                left: calc(50% - 125px);
+            }
+    
+            .lineInbetween{
+          
+                position: relative;
+                .leftSideLine{
+                    display: none;
+                }
+                .largeLine{
+                    display: none;
+                    width: 4px;
+                    height: 130px;
+                    background-color: $green;
+                    position: absolute;
+                    bottom: -135px;
+                    right: calc(50% - 2px);
+                    background: linear-gradient(180deg, rgba(255,142,78,1) 0%, rgba(69,208,238,1) 100%);
+           
+                }
+                .rightSideLine{
+                    display: none;
+                }
             }
         }
+        
     }
-    
+    button{
+        margin: 0px 0px;
+        margin-bottom: 20px;
+        
+    }
+    button::before{
+        content: "Contact Us";
+    }
 }
 
 @media(min-width: 1040px){
@@ -222,6 +234,10 @@
             }
 
         }
+        a{
+            transform: translateY(-20px);
+        }
+      
     }
 }
 

@@ -702,7 +702,8 @@
   transform: rotate(-40deg);
 }
 .pricing button {
-  margin: 30px 0px;
+  margin: 25px 0px;
+  margin-bottom: 40px;
 }
 .pricing button::before {
   content: "Contact Us";
@@ -942,6 +943,9 @@
   padding: 30px 0px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .ourProcess .svgBlobs {
   display: none;
@@ -973,11 +977,11 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-.ourProcess .process {
+.ourProcess .processChart .process {
   position: relative;
   margin: 50px 10px;
 }
-.ourProcess .process .processText {
+.ourProcess .processChart .process .processText {
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -985,26 +989,26 @@
   position: relative;
   z-index: 2;
 }
-.ourProcess .process .processText b {
+.ourProcess .processChart .process .processText b {
   font-family: "bold";
   color: #FF8E4E;
   font-size: 40px;
   text-align: center;
 }
-.ourProcess .process .processText .blue {
+.ourProcess .processChart .process .processText .blue {
   color: #45D0EE;
 }
-.ourProcess .process .processText .green {
+.ourProcess .processChart .process .processText .green {
   color: #A0C343;
 }
-.ourProcess .process .processText .pink {
+.ourProcess .processChart .process .processText .pink {
   color: #FF497C;
 }
-.ourProcess .process .processText p {
+.ourProcess .processChart .process .processText p {
   max-width: 500px;
   text-align: center;
 }
-.ourProcess .process svg {
+.ourProcess .processChart .process svg {
   width: 250px;
   height: 250px;
   position: absolute;
@@ -1013,13 +1017,13 @@
   top: 0;
   left: calc(50% - 125px);
 }
-.ourProcess .process .lineInbetween {
+.ourProcess .processChart .process .lineInbetween {
   position: relative;
 }
-.ourProcess .process .lineInbetween .leftSideLine {
+.ourProcess .processChart .process .lineInbetween .leftSideLine {
   display: none;
 }
-.ourProcess .process .lineInbetween .largeLine {
+.ourProcess .processChart .process .lineInbetween .largeLine {
   display: none;
   width: 4px;
   height: 130px;
@@ -1029,8 +1033,15 @@
   right: calc(50% - 2px);
   background: linear-gradient(180deg, rgb(255, 142, 78) 0%, rgb(69, 208, 238) 100%);
 }
-.ourProcess .process .lineInbetween .rightSideLine {
+.ourProcess .processChart .process .lineInbetween .rightSideLine {
   display: none;
+}
+.ourProcess button {
+  margin: 0px 0px;
+  margin-bottom: 20px;
+}
+.ourProcess button::before {
+  content: "Contact Us";
 }
 
 @media (min-width: 1040px) {
@@ -1126,6 +1137,9 @@
   }
   .ourProcess .processChart .process:nth-child(3) .lineInbetween .rightSideLine {
     background-color: #A0C343;
+  }
+  .ourProcess a {
+    transform: translateY(-20px);
   }
 }
 @keyframes shiftAround {
