@@ -652,10 +652,6 @@
   .services .service {
     margin: 10px 5px;
   }
-  .services .service .serviceImage {
-    scale: 0.8;
-    margin: 20px 20px;
-  }
 }
 @media (min-width: 1200px) {
   .servicesSection .services .service {
