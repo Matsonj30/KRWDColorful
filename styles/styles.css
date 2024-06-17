@@ -111,8 +111,8 @@
   background-color: #1B1B1B;
 }
 .navigationBar #menu img {
-  height: 100px;
-  width: 267px;
+  height: 140px;
+  width: 163px;
   padding-left: 0px;
 }
 .navigationBar #menu ul {
@@ -306,11 +306,11 @@
   margin-bottom: 20px;
 }
 .landing .logo {
-  height: 70px;
-  width: 187px;
+  width: 116px;
+  height: 100px;
   position: absolute;
   top: 22px;
-  left: 5px;
+  left: 100px;
 }
 .landing .svgBlobs img {
   z-index: 0;
@@ -420,8 +420,8 @@
 @media (min-width: 1200px) {
   .landing .logo {
     top: 15px;
-    height: 100px;
-    width: 267px;
+    height: 140px;
+    width: 163px;
   }
 }
 @media (min-width: 1400px) {
@@ -1165,8 +1165,8 @@
   margin-bottom: 30px;
 }
 .newPageHeader .logo {
-  height: 70px;
-  width: 187px;
+  width: 116px;
+  height: 100px;
   position: absolute;
   top: 22px;
   left: 5px;
@@ -1260,8 +1260,9 @@
 @media (min-width: 1200px) {
   .newPageHeader .logo {
     top: 15px;
-    height: 100px;
-    width: 267px;
+    left: 7vw;
+    height: 140px;
+    width: 163px;
   }
 }
 @keyframes shiftUp {
@@ -1476,6 +1477,7 @@ footer .section ul li:first-child b {
   color: #FF497C;
 }
 footer .logoAndDescription {
+  position: relative;
   margin-top: 10px;
   margin-bottom: 30px;
   display: flex;
@@ -1491,8 +1493,8 @@ footer .logoAndDescription p {
 }
 footer .logoAndDescription img {
   margin-bottom: 10px;
-  height: 100px;
-  width: 267px;
+  height: 140px;
+  width: 163px;
 }
 footer .hours {
   display: flex;
