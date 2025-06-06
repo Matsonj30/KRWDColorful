@@ -53,12 +53,15 @@ $black: #1B1B1B;
 
 //-------------------------------MULTI PURPOSE CSS---------------------------------
 :root {
-     color-scheme: light;
+     color-scheme: only light;
 }
 *{
   margin: 0;   
   padding: 0;
   font-family: "Poppins";
+}
+body{
+  background-color: $white;
 }
 .wrapper{
   display: flex;
