@@ -63,7 +63,29 @@ $black: #1B1B1B;
   
 }
 
+@media (prefers-color-scheme: dark) {
+  .servicesSection {
+    background-color: $white;
+    color: $black;
 
+    .titleSection{
+      .backdrop{
+        color: rgb(240, 240, 241);
+  
+      }
+    }
+  }
+   .portfolio{
+    background-color: $white;
+    color: $black;
+    .titleSection{
+      .backdrop{
+        color: rgb(240, 240, 241);
+  
+      }
+    }
+   }
+}
 
 ::selection {
   background-color: $green; /* Set your desired highlight color */
