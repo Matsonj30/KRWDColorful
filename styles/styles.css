@@ -22,6 +22,10 @@
   src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
   font-display: swap;
 }
+:root {
+  color-scheme: light only;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -33,11 +37,26 @@
   justify-content: center;
 }
 
+@media (prefers-color-scheme: dark) {
+  .servicesSection {
+    background-color: #FFFFFF;
+    color: #1B1B1B;
+  }
+  .servicesSection .titleSection .backdrop, .servicesSection .secondaryTitleSection .backdrop {
+    color: rgb(240, 240, 241);
+  }
+  .portfolio {
+    background-color: #FFFFFF;
+    color: #1B1B1B;
+  }
+  .portfolio .titleSection .backdrop, .portfolio .secondaryTitleSection .backdrop {
+    color: rgb(240, 240, 241);
+  }
+}
 ::-moz-selection {
   background-color: #A0C343; /* Set your desired highlight color */
   color: #1B1B1B; /* Set the text color */
 }
-
 ::selection {
   background-color: #A0C343; /* Set your desired highlight color */
   color: #1B1B1B; /* Set the text color */
