@@ -33,7 +33,7 @@
 }
 
 body {
-  background-color: #FFFFFF;
+  background-color: #FFFFFF !important;
 }
 
 .wrapper {
