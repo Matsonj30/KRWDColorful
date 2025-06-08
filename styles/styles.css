@@ -573,10 +573,10 @@ body {
   width: 170px;
   height: 170px;
   display: block;
-  background-color: #E7E7E7;
+  background-color: #f3f3f3;
   position: absolute;
   border-radius: 50%;
-  z-index: -1;
+  z-index: 1;
   top: -21px;
   left: -21px;
 }
